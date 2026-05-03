@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+
+  /* 🌊 fond océan animé */
+  background: linear-gradient(180deg, #020617, #0a1f44, #020617);
+  background-size: 300% 300%;
+  animation: oceanMove 10s ease infinite;
+
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* 🌊 animation fond */
+@keyframes oceanMove {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* APP */
+.app {
+  width: 100%;
+  max-width: 420px;
+  padding: 10px;
+  padding-bottom: 110px;
+}
+
+/* 🔱 LOGO */
+.logo {
+  text-align: center;
+  font-size: 45px;
+  margin-top: 10px;
+
+  animation: float 3s ease-in-out infinite;
+
+  text-shadow:
+    0 0 10px #0ea5e9,
+    0 0 20px #0284c7,
+    0 0 40px #0369a1;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+/* TITRE */
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 10px 0;
+
+  color: #38bdf8;
+  text-shadow:
+    0 0 10px #0ea5e9,
+    0 0 20px #0284c7;
+}
+
+/* BOX */
+.box {
+  background: rgba(3, 17, 40, 0.85);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 14px;
+
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  backdrop-filter: blur(10px);
+
+  text-align: center;
+}
+
+/* 💰 SOLDE */
+.solde {
+  font-size: 18px;
+  font-weight: bold;
+  color: #22d3ee;
+}
+
+/* LISTE / MIX */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-box {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-box:active {
+  transform: scale(0.96);
+}
+
+/* PRODUITS */
+.product {
+  background: rgba(3, 17, 40, 0.9);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 14px;
+
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  text-align: center;
+}
+
+/* 🔵 bouton AJOUTER (NE PAS TOUCHER GLOBAL BUTTON) */
+.product button {
+  margin-top: 8px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+  color: white;
+  font-weight: bold;
+
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.3);
+
+  cursor: pointer;
+}
+
+.product button:active {
+  transform: scale(0.97);
+}
+
+/* ❌ bouton supprimer panier */
+#cartBox button {
+  margin-left: 8px;
+  padding: 4px 8px;
+
+  background: #ef4444;
+  border: none;
+  color: white;
+  border-radius: 6px;
+
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#cartBox button:active {
+  transform: scale(0.95);
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background: rgba(2, 12, 27, 0.95);
+  backdrop-filter: blur(12px);
+
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+
+  border-top: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.nav-item {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+
+  color: #7dd3fc;
+}
